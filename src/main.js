@@ -7,12 +7,16 @@ const xObject = JSON.parse(x)
 
 const hashMap = xObject || [ //xObject存在就读取，不存在就用后面的数组
   {
-    logo: 'A',
-    url: 'https://www.acfun.cn'
+    logo: 'B',
+    url: 'https://www.baidu.com'
   },
   {
-    logo: 'B',
-    url: 'https://www.bilibili.com'
+    logo: 'G',
+    url: 'https://google.com'
+  },
+  {
+    logo: 'T',
+    url: 'https://taobao.com'
   },
 ]
 const simplifyUrl = (url) => {
@@ -82,6 +86,6 @@ $(document).on('keypress', e => {
 
 const $input = $('.searchForm').find('input')
 $input.on('keypress', e => { //阻止冒泡，input里输入链接首字母可能跳转链接
-  console.log(e)
+  // console.log(e)
   e.stopPropagation()
 })

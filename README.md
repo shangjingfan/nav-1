@@ -8,3 +8,7 @@ parcel src/index.html
 ```
 yarn build
 ```
+
+# 隐藏功能
+1. 搜索框外输入对应字母，即可直接打开网页
+  

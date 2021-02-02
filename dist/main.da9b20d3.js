@@ -124,11 +124,14 @@ var x = localStorage.getItem('x');
 var xObject = JSON.parse(x);
 var hashMap = xObject || [//xObject存在就读取，不存在就用后面的数组
 {
-  logo: 'A',
-  url: 'https://www.acfun.cn'
-}, {
   logo: 'B',
-  url: 'https://www.bilibili.com'
+  url: 'https://www.baidu.com'
+}, {
+  logo: 'G',
+  url: 'https://google.com'
+}, {
+  logo: 'T',
+  url: 'https://taobao.com'
 }];
 
 var simplifyUrl = function simplifyUrl(url) {
@@ -192,8 +195,8 @@ $(document).on('keypress', function (e) {
 var $input = $('.searchForm').find('input');
 $input.on('keypress', function (e) {
   //阻止冒泡，input里输入链接首字母可能跳转链接
-  console.log(e);
+  // console.log(e)
   e.stopPropagation();
 });
 },{}]},{},["epB2"], null)
-//# sourceMappingURL=main.c448bdf9.js.map
+//# sourceMappingURL=main.da9b20d3.js.map
