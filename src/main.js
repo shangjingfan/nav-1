@@ -27,7 +27,7 @@ const render = () => {
   hashMap.forEach((node, index) => { //再渲染
     const $li = $(`<li>
         <div class="site">
-          <div class="logo">${node.logo[0]}</div>
+          <div class="logo">${node.logo}</div>
           <div class="link">${simplifyUrl(node.url)}</div>
           <div class="close">
             <svg class="icon">
@@ -57,8 +57,7 @@ $('.addButton').on('click', () => {
   }
   console.log(url)
   hashMap.push({
-    logo: simplifyUrl(url),
-    logoType: 'text',
+    logo: simplifyUrl(url)[0],
     url: url
   })
 
@@ -71,7 +70,12 @@ window.onbeforeunload = () => {
   localStorage.setItem('x', string)
 }
 
-// $(document).on('keypress', e => {
-//   console.log(e.key)
-//   const key = e.key
-// })
+$(document).on('keypress', e => {
+  console.log(e.key)
+  const {key} = e 
+  for(let i = 0; i<hashMap.length; i++){
+    if(hashMap[i].logo.toLowerCase() === key){
+      window.open(hashMap[i].url)
+    }
+  }
+})
