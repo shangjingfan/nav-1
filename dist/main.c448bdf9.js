@@ -189,5 +189,11 @@ $(document).on('keypress', function (e) {
     }
   }
 });
+var $input = $('.searchForm').find('input');
+$input.on('keypress', function (e) {
+  //阻止冒泡，input里输入链接首字母可能跳转链接
+  console.log(e);
+  e.stopPropagation();
+});
 },{}]},{},["epB2"], null)
-//# sourceMappingURL=main.9b32a199.js.map
+//# sourceMappingURL=main.c448bdf9.js.map

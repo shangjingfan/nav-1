@@ -72,10 +72,16 @@ window.onbeforeunload = () => {
 
 $(document).on('keypress', e => {
   console.log(e.key)
-  const {key} = e 
-  for(let i = 0; i<hashMap.length; i++){
-    if(hashMap[i].logo.toLowerCase() === key){
+  const { key } = e
+  for (let i = 0; i < hashMap.length; i++) {
+    if (hashMap[i].logo.toLowerCase() === key) {
       window.open(hashMap[i].url)
     }
   }
+})
+
+const $input = $('.searchForm').find('input')
+$input.on('keypress', e => { //阻止冒泡，input里输入链接首字母可能跳转链接
+  console.log(e)
+  e.stopPropagation()
 })

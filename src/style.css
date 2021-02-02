@@ -53,6 +53,7 @@ body {
   padding: 0 10px;
   border: none;
   border: 1px solid #ddd;
+  outline: none;
 }
 .searchForm > button {
   white-space: nowrap;
