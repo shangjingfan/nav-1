@@ -168,10 +168,14 @@ $('.addButton').on('click', function () {
   }
 
   console.log(url);
-  hashMap.push({
-    logo: simplifyUrl(url)[0],
-    url: url
-  });
+
+  if (url !== 'https://') {
+    hashMap.push({
+      logo: simplifyUrl(url)[0],
+      url: url
+    });
+  }
+
   render(); //渲染
 });
 
@@ -199,4 +203,4 @@ $input.on('keypress', function (e) {
   e.stopPropagation();
 });
 },{}]},{},["epB2"], null)
-//# sourceMappingURL=main.da9b20d3.js.map
+//# sourceMappingURL=main.9ca5a783.js.map

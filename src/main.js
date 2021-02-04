@@ -60,10 +60,12 @@ $('.addButton').on('click', () => {
     url = 'https://' + url
   }
   console.log(url)
-  hashMap.push({
-    logo: simplifyUrl(url)[0],
-    url: url
-  })
+  if (url !== 'https://') {
+    hashMap.push({
+      logo: simplifyUrl(url)[0],
+      url: url
+    })
+  }
 
   render() //渲染
 })
